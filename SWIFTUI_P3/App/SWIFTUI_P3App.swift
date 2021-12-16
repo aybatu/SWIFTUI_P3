@@ -9,14 +9,15 @@ import SwiftUI
 
 @main
 struct SWIFTUI_P3App: App {
-    @AppStorage("isOnboarding") private var isOnboarding: Bool = true
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    
     var body: some Scene {
-        WindowGroup {
-            if isOnboarding {
-                OnboardingView()
-            } else {
-                ContentView()
-            }
+      WindowGroup {
+        if isOnboarding {
+          OnboardingView()
+        } else {
+          ContentView()
         }
+      }
     }
 }
